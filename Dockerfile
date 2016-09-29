@@ -16,10 +16,10 @@ RUN groupadd -r infinit && \
     apt-get clean -y && \
     apt-get autoclean -y && \
     apt-get autoremove -y && \
-    rm -rf /usr/share/locale/* && \
-    rm -rf /var/cache/debconf/*-old && \
-    rm -rf /var/lib/apt/lists/* && \
-    rm -rf /usr/share/doc/*
+    rm -rf /usr/share/locale/* \
+           /var/cache/debconf/*-old \
+           /var/lib/apt/lists/* \
+           /usr/share/doc/*
 
 USER infinit
 VOLUME /mnt/shared
